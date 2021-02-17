@@ -98,7 +98,9 @@ try:
                 print ("###################")
                 
         cv2.imshow('result',QueryImgBGR)
+        
         if cv2.waitKey(10)==ord('q'):
             break
+            
 except KeyboardInterrupt:
     cv2.destroyAllWindows()
