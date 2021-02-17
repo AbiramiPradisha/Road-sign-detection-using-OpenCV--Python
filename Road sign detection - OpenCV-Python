@@ -11,7 +11,7 @@ cnt=10
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
 sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, 2)
 
-
+##initialising the image url 
 url="http://192.168.1.17:8080/shot.jpg"
 lt=1;
 gt=1;
