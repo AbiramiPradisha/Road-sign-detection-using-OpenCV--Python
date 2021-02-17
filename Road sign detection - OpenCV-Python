@@ -50,10 +50,12 @@ try:
                 matches=matches1;
                 trainKP=trainKP1;
                 trainDesc=trainDesc1;
+                
             elif i==2:
                 matches=matches2;
                 trainKP=trainKP2;
                 trainDesc=trainDesc2;
+                
             else:
                 matches=matches3;
                 trainKP=trainKP3;
@@ -64,6 +66,7 @@ try:
                 if(m.distance<0.75*n.distance):
                     goodMatch.append(m)
             print (len(goodMatch))
+            
             if(len(goodMatch)>MIN_MATCH_COUNT):
                 tp=[]
                 qp=[]
@@ -86,6 +89,7 @@ try:
                     cv2.putText(QueryImgBGR, "SCHOOL SIGN ", (10, 30),cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
                     sock.sendto('B', ("192.168.1.35", 8888))
+                    
                 else:
                     sock.sendto('0', ("192.168.1.35", 8888))
                     
